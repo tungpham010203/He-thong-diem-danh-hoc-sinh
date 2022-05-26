@@ -16,6 +16,36 @@ import time
 #)
 #print(' pc receiving data:')
 
+
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate("path/to/serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAJ3b5ZWwObVBW0mZQqAlbatlBNPHl56IU",
+  authDomain: "diem-danh-8d35a.firebaseapp.com",
+  databaseURL: "https://diem-danh-8d35a-default-rtdb.firebaseio.com",
+  projectId: "diem-danh-8d35a",
+  storageBucket: "diem-danh-8d35a.appspot.com",
+  messagingSenderId: "1083266568312",
+  appId: "1:1083266568312:web:7b7499dc69f833cf6b5d8d",
+  measurementId: "G-MBW3423JWX"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 nam=0
 tan=0
 
